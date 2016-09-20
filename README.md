@@ -1,7 +1,7 @@
 # Simple.Spring.Net
 Simple.Spring.Net
 
-用.net 写一遍  便于理解
+阅读spring源码 用.net 写一遍  便于理解
 
 commit log
 
@@ -10,4 +10,4 @@ commit log
 1.能通过xml 配置文件 实例化对象，装载属性
 
 
-2.装载属性支持引用类型 
+2.装载属性支持引用类型  
