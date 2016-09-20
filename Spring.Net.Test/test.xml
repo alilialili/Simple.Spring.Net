@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beans>
+  <bean id="SpringTest"   type="Spring.Net.Test.SpringTest,Spring.Net.Test">
+    <Property name="TestProty" value="aaaaa">
+      
+    </Property>
+    <Property name="TestIntProty" value="1">
+
+    </Property>
+    
+  </bean>
+  <bean id="SpringTest1"  type="Spring.Net.Test.SpringTest1,Spring.Net.Test">
+    <Property name="TestProty" value="aaaaa">
+
+    </Property>
+  </bean>
+</beans>
