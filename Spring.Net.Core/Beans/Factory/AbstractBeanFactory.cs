@@ -41,8 +41,36 @@ namespace Spring.Net.Core.Beans.Factory
             foreach (var item in beanDefinition.PropertyValues)
             {
                 var pro = beanDefinition.Bean.GetType().GetProperty(item.Name);
-                pro.SetValue(beanDefinition.Bean, Convert.ChangeType(item.Value, pro.PropertyType), null);
+                if (CheckObjectTypeIsValueType(pro.PropertyType))
+                {
+                    pro.SetValue(beanDefinition.Bean, Convert.ChangeType(item.Value, pro.PropertyType), null);
+                }
+                else {
+                    if (item.Value is BeanDefinition)
+                    {
+                        var refBeanDefinition=item.Value as BeanDefinition;
+                        CreateBeanInstance(refBeanDefinition);
+                        CreateBeanPropertyValues(refBeanDefinition);
+                        pro.SetValue(beanDefinition.Bean, refBeanDefinition.Bean, null);
+                    }
+                   
+                }
+               
             }
+        }
+
+        private bool CheckObjectTypeIsValueType(Type type) {
+           
+            if (typeof(int)==type||typeof(string)==type)
+            {
+                return true;
+            }
+
+            return false;
+            
+                
+            
+        
         }
     }
 }

@@ -1,10 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <beans>
+  <bean id="RefSpringTest" type="Spring.Net.Test.RefSpringTest,Spring.Net.Test">
+    <Property name="TestProty" value="RefSpringTest">
+
+    </Property>
+  </bean>
+  
   <bean id="SpringTest"   type="Spring.Net.Test.SpringTest,Spring.Net.Test">
     <Property name="TestProty" value="aaaaa">
       
     </Property>
     <Property name="TestIntProty" value="1">
+
+    </Property>
+    <Property name="RefSpringTest" ref="RefSpringTest">
 
     </Property>
     

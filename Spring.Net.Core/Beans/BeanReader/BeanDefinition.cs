@@ -19,13 +19,6 @@ namespace Spring.Net.Core.Beans.BeanReader
 
        public string TypeName { get; set; }
 
-       private object GetBean()
-       {
-           var obj = Activator.CreateInstance(Type.GetType(TypeName));
-           return obj;
-
-       }
-
        
     }
 }

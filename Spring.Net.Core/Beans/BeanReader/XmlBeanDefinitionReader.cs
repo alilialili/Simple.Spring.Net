@@ -51,6 +51,7 @@ namespace Spring.Net.Core.Beans.BeanReader
                else 
                {
                    string refObject = node.Attributes["ref"].InnerText;
+                   beanDefinition.PropertyValues.Add(new PropertyValue(refObject, Registry[refObject]));
                }
            }
        }

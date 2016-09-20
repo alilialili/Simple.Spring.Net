@@ -31,11 +31,14 @@ namespace Spring.Net.Test
 
         public int TestIntProty { get; set; }
 
+        public RefSpringTest RefSpringTest { get; set; }
+
         public void HelloWorld(string message)
         {
             Console.WriteLine(message);
             Console.WriteLine(TestProty);
             Console.WriteLine(TestIntProty);
+            Console.WriteLine(RefSpringTest.TestProty);
         }
     }
     public class SpringTest1 : ISpirngTest
@@ -46,5 +49,10 @@ namespace Spring.Net.Test
             Console.WriteLine(message);
             Console.WriteLine(TestProty);
         }
+    }
+
+    public class RefSpringTest 
+    {
+        public string TestProty { get; set; }
     }
 }
