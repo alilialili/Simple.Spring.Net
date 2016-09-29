@@ -1,7 +1,7 @@
 # Simple.Spring.Net
 Simple.Spring.Net
 
-阅读spring源码 用.net 写一遍  便于理解
+阅读tiny spring源码 用.net 写一遍  便于理解
 
 commit log
 
